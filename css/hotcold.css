@@ -1,0 +1,21 @@
+body div {
+	border: 1px solid red;
+}
+
+
+.wrapper {
+	text-align: center;
+}
+
+
+.userinput {
+	width: 120px;
+	height: 60px;
+	font-size: 3em;
+	color: deeppink;
+	text-align: center;
+}
+
+.feedback {
+	background-color: red;
+}

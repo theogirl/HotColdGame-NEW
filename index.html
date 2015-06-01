@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>HotCold Game</title>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/hotcold.css">
+
+	<!-- JavaScript -->
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hotcold.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<div class="guess">
+			<h1>The Hot-Cold Game - Official!</h1>
+			<p>The computer is now thinking of a particular number between 1 and 100. <br />Enter your guess below to see how close you are, and keep re-guessing until you get it! </p>
+			<input class="userinput" type="text" maxlength="3">
+		</div><!--end div guess-->
+
+		<div class="numbers">
+			<h2>Numbers guessed so far:</h2>
+			<p class="userGuesses"></p>
+		</div><!--end div numbers-->
+
+		<div class="score">
+			<h2>Total number of guesses so far:</h2>
+			<p class="userScore"></p>
+		</div><!--end div score-->
+
+		<button class="new">New Game</button>
+
+	</div><!--end div wrapper-->	
+
+</body>
+
+</html>
