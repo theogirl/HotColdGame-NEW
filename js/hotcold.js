@@ -4,7 +4,7 @@ $(document).ready (function() {
 
 
 //-----Global Variables------//
-	var userGuesses;
+	var userGuesses = [];
 	var userScore;
 	var userNumber;
 	var randomNumber;
@@ -22,25 +22,38 @@ $(document).ready (function() {
 			if (!winner) { 
 				userNumber = $('.userinput').val();
 				goodNumber = validateNumber(userNumber); // validate the number - returns T or F
+
 				if (goodNumber) {
-					alert(userNumber);
 					winner = compareNumber(userNumber);
 					recordGuesses();
 					updateScore();
 					resetInput();
-
-				} //end goodNumber test
-			}//end winner test
+					} 
+				else {
+					resetInput();
+				} // end goodnumber test
+			}//end if not winner
+			else {
+				alert('you already won - start new game?');
+			}
 		}// end event
 	});//end keydown
+
+//-----Start new game on button click---//
+	$('.new').click(function() {
+		newGame();
+	});
+
  
 // -------FUNCTIONS---------//
 
 //-----Resets the default values for each new game and generates a new random number------//
 function newGame() {
-		userGuesses = [];
 		userScore = 0;
 		winner = false;
+		$('.userScore').text(''); // reset to blank
+		$('.userGuesses').text(''); // reset to blank
+		$('.userinput').focus();
 		randomNumber = getRandomInt(1, 100); // generate a random integer btwn 1 and 100	
 } 
 
@@ -76,11 +89,12 @@ function validateNumber(userInput) {
 } 
 
 function compareNumber(userInput) {
-
 			if (randomNumber === userNumber) {
+				alert('you won!');
 				return true;
 			}
 			else {
+				alert('you lose!');
 				return false;
 			}
 } // end compareNumber function
