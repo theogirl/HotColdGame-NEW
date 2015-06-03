@@ -1,0 +1,8 @@
+//The program basics//
+
+Generate random number
+Listen for user input
+Capture user input
+Validate user input
+  If OK---> Compare number -->If correct, then winner = true; else winner = false then give feedback
+  Else--->Give feedback then listen for new user input

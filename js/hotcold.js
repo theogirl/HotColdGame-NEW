@@ -14,7 +14,7 @@ $(document).ready (function() {
 //-----Reset values for each new game------//
 	newGame();
 
-//-----Loop thru this sequence until the user wins!---//
+//-----Listen to every Enter event on that input field--//
 
 	$('.userinput').keydown(function(event) { 
 		if (event.which == 13) { 
@@ -90,7 +90,7 @@ function validateNumber(userInput) {
 
 function compareNumber(userInput) {
 			if (randomNumber === userNumber) {
-				alert('you won!');
+				alert('you win!');
 				return true;
 			}
 			else {
